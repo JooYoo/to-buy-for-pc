@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
-using ToBuy_for_PC.ListWindow;
+using ToBuy_for_PC.DataContract;
 
-namespace ToBuy_for_PC.ViewModel
+namespace ToBuy_for_PC.ListWindow
 {
-    public class RemoveSelectedCommand:ICommand
+    public class ClearCommand:ICommand
     {
         private MainWindowViewModel viewModel;
-        public RemoveSelectedCommand(MainWindowViewModel mainWindowViewModel)
+        public ClearCommand(MainWindowViewModel mainWindowViewModel)
         {
             viewModel = mainWindowViewModel;
         }
@@ -19,9 +20,7 @@ namespace ToBuy_for_PC.ViewModel
 
         public void Execute(object parameter)
         {
-            // remove item
-            var readyRemove = viewModel.SelectedToBuy;
-            viewModel.ToBuys.Remove(readyRemove);
+            viewModel.ToBuys = new ObservableCollection<ToBuy>();
         }
 
         public event EventHandler CanExecuteChanged;

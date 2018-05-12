@@ -3,9 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using ToBuy_for_PC.Annotations;
-using ToBuy_for_PC.Commands;
 using ToBuy_for_PC.DataContract;
-using ToBuy_for_PC.ViewModel;
 
 namespace ToBuy_for_PC.ListWindow
 {

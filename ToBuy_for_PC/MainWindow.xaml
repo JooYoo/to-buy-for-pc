@@ -62,7 +62,8 @@
                       BorderThickness="0"
                       VerticalGridLinesBrush="Transparent"
                       HorizontalGridLinesBrush="LightGray"
-                      AutoGenerateColumns="False">
+                      AutoGenerateColumns="False"
+                      SelectionUnit="FullRow">
 
                 <DataGrid.Columns >
                     <!--DataGrid.CheckBox: IsDone-->
@@ -82,7 +83,6 @@
                                         Background="Transparent"
                                         BorderThickness="0"
                                         HorizontalAlignment="Center"
-                                        ClickMode="Press"
                                         Command="{Binding Path=DataContext.RemoveSelectedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>

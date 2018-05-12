@@ -4,10 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using ToBuy_for_PC.DataContract;
-using ToBuy_for_PC.ListWindow;
-using ToBuy_for_PC.ViewModel;
 
-namespace ToBuy_for_PC.Commands
+namespace ToBuy_for_PC.ListWindow
 {
     public class ArrangeCommand : ICommand
     {
@@ -29,16 +27,6 @@ namespace ToBuy_for_PC.Commands
         public void Execute(object parameter)
         {
             var toBuys = viewModel.ToBuys;
-
-
-            // move DoneToBuy to last place
-
-            //// find selectedItem index
-            //int indexOld = toBuys.ToList().IndexOf(selectedToBuy);
-            //// get last item index
-            //int lastIndex = toBuys.Count - 1;
-            //// move to new place
-            //toBuys.Move(indexOld, lastIndex);
 
             // 按照假到真的顺序重新排序
             List<ToBuy> orderByIsDone = toBuys.OrderBy(x => x.IsDone).ToList();
