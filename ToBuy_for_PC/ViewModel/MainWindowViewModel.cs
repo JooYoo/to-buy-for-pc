@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using ToBuy_for_PC.Annotations;
+using ToBuy_for_PC.Commands;
 using ToBuy_for_PC.Model;
 
 namespace ToBuy_for_PC.ViewModel
@@ -13,9 +13,7 @@ namespace ToBuy_for_PC.ViewModel
         private string wantBuy;
         private ObservableCollection<ToBuy> toBuys;
         private ToBuy selectedToBuy;
-        private bool isSelectedDone;
 
-        public bool TestTrue { get; set; } = true;
 
         public string WantBuy
         {
@@ -35,6 +33,7 @@ namespace ToBuy_for_PC.ViewModel
                 OnPropertyChanged();
             }
         }
+
         public ToBuy SelectedToBuy
         {
             get { return selectedToBuy; }
@@ -42,23 +41,13 @@ namespace ToBuy_for_PC.ViewModel
             {
                 selectedToBuy = value;
                 OnPropertyChanged();
-                //selectedToBuy.IsDone = !selectedToBuy.IsDone;
             }
         }
-
-        public bool IsSelectedDone
-        {
-            get { return isSelectedDone; }
-            set
-            {
-                isSelectedDone = selectedToBuy.IsDone;
-                OnPropertyChanged();
-            }
-        } 
 
         public ICommand ClearCommand { get; set; }
         public ICommand AddCommand { get; set; }
         public ICommand RemoveSelectedCommand { get; set; }
+        public ICommand ArrangeCommand { get; set; }
 
         public MainWindowViewModel()
         {
@@ -72,6 +61,8 @@ namespace ToBuy_for_PC.ViewModel
             AddCommand = new AddCommand(this);
             // Remove item Button
             RemoveSelectedCommand = new RemoveSelectedCommand(this);
+            // arrange Button
+            ArrangeCommand = new ArrangeCommand(this);
         }
 
         // mock Data
@@ -80,7 +71,8 @@ namespace ToBuy_for_PC.ViewModel
             return new ObservableCollection<ToBuy>
             {
                 new ToBuy{Name = "Buy1", IsDone = false},
-                new ToBuy{Name = "Buy2", IsDone = true}
+                new ToBuy{Name = "Buy2", IsDone = false},
+                new ToBuy{Name = "Buy3", IsDone = false}
             };
         }
 

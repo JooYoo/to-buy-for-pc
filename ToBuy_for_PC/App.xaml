@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:ToBuy_for_PC"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style x:Key="MyCheckBoxStyle" TargetType="{x:Type CheckBox}">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+       
+
     </Application.Resources>
+    
 </Application>

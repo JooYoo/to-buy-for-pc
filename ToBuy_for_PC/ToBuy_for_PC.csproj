@@ -54,12 +54,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\ArrangeCommand.cs" />
     <Compile Include="Model\ToBuy.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="ViewModel\AddCommand.cs" />
-    <Compile Include="ViewModel\ClearCommand.cs" />
+    <Compile Include="Commands\AddCommand.cs" />
+    <Compile Include="Commands\ClearCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
-    <Compile Include="ViewModel\RemoveSelectedCommand.cs" />
+    <Compile Include="Commands\RemoveSelectedCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

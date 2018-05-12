@@ -13,3 +13,4 @@ C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.csproj.
 C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.csproj.CoreCompileInputs.cache
 C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.exe
 C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.pdb
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC\obj\Debug\App.baml

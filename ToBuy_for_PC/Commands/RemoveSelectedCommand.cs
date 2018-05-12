@@ -18,7 +18,7 @@ namespace ToBuy_for_PC.ViewModel
 
         public void Execute(object parameter)
         {
-            
+            // remove item
             var readyRemove = viewModel.SelectedToBuy;
             viewModel.ToBuys.Remove(readyRemove);
         }
