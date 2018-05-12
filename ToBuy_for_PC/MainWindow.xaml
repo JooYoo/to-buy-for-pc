@@ -17,8 +17,6 @@
             <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
 
-
-
         <!--Title area-->
         <Grid Row="0">
             <Label Name="TitleLable" 
@@ -60,167 +58,57 @@
                       CanUserAddRows="False"
                       ColumnWidth="*"
                       FontSize="25"
+                      Background="Transparent"
+                      BorderThickness="0"
+                      VerticalGridLinesBrush="Transparent"
+                      HorizontalGridLinesBrush="LightGray"
                       AutoGenerateColumns="False">
 
                 <DataGrid.Columns >
-                    <DataGridCheckBoxColumn ElementStyle="{StaticResource MyCheckBoxStyle}"  Binding="{Binding IsDone,UpdateSourceTrigger=PropertyChanged}" Width="0.2*" />
-
-
-                    <DataGridTextColumn Binding="{Binding Name}" IsReadOnly="True">
-                        <DataGridTextColumn.ElementStyle>
-                            <Style TargetType="TextBlock" >
-                                <Style.Triggers >
-                                    <DataTrigger Binding="{Binding SelectedToBuy.IsDone}" Value="true">
-                                        <Setter Property="TextDecorations" Value="Strikethrough"/>
-                                    </DataTrigger>
-                                </Style.Triggers>
-
-                                <Setter Property="Padding" Value="20"/>
-                                <Setter Property="HorizontalAlignment" Value="Left"/>
-                                <Setter Property="VerticalAlignment" Value="Center"/>
-                            </Style>
-
-                        </DataGridTextColumn.ElementStyle>
-                    </DataGridTextColumn>
-
-
-
-                    <DataGridTemplateColumn Width="0.1*">
+                    <!--DataGrid.CheckBox: IsDone-->
+                    <DataGridCheckBoxColumn ElementStyle="{StaticResource IsDoneStyle}"  Binding="{Binding IsDone,UpdateSourceTrigger=PropertyChanged}" Width="0.2*" />
+                    <!--DataGrid.CheckBox: IsDone-->
+                    <DataGridTextColumn ElementStyle="{StaticResource NameStyle}" Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                    <!--DataGrid.Button.RemoveBt-->
+                    <DataGridTemplateColumn Width="0.2*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button x:Name="RemoveItemButton"
-                                        Content="X"
+                                        FontFamily="Segoe MDL2 Assets"
+                                        Content="&#xE10A;"
                                         FontWeight="Light"
-                                        Width="55"
-                                        Padding="15,0,0,0"
+                                        Width="85"
+                                        Padding="20,0,20,0"
                                         Background="Transparent"
                                         BorderThickness="0"
-                                        HorizontalAlignment="Right"
+                                        HorizontalAlignment="Center"
                                         ClickMode="Press"
                                         Command="{Binding Path=DataContext.RemoveSelectedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
-
-
-
-
-
             </DataGrid>
-
-            <!--<DataGrid x:Name="ListDataGrid"
-                      HeadersVisibility="None"
-                      ItemsSource="{Binding ToBuys}"
-                      SelectedItem="{Binding SelectedToBuy}"
-                      CanUserAddRows="False"
-                      HorizontalAlignment="Left"
-                      
-                      ColumnWidth="*"
-                      
-                      RowHeight="50"
-                      FontSize="20"
-                      VerticalGridLinesBrush="White"
-                      HorizontalGridLinesBrush="LightGray"
-                      Background="White"
-                     >
-              
-                <DataGrid.Columns>
-                    -->
-            <!--item:IsDone-->
-            <!--
-
-                    <DataGridCheckBoxColumn   Binding="{Binding IsDone}" Width="0.2*">
-                        <DataGridCheckBoxColumn.ElementStyle>
-                            <Style TargetType="CheckBox">
-                                <Setter Property="Width" Value="20"/>
-                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                                <Setter Property="VerticalContentAlignment" Value="Center"/>
-                                <Setter Property="LayoutTransform">
-                                    <Setter.Value>
-                                        <ScaleTransform ScaleX="2" ScaleY="2"/>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </DataGridCheckBoxColumn.ElementStyle>
-                    </DataGridCheckBoxColumn>
-
-                    -->
-            <!--item:Name-->
-            <!--
-                    <DataGridTextColumn Binding="{Binding Name}" IsReadOnly="True">
-                        <DataGridTextColumn.ElementStyle>
-                            <Style TargetType="TextBlock" >
-                                <Style.Triggers >
-                                    <DataTrigger Binding="{Binding SelectedToBuy.IsDone}" Value="true">
-                                        <Setter Property="TextDecorations" Value="Strikethrough"/>
-                                    </DataTrigger>
-                                </Style.Triggers>
-
-                                <Setter Property="Padding" Value="20"/>
-                                <Setter Property="HorizontalAlignment" Value="Left"/>
-                                <Setter Property="VerticalAlignment" Value="Center"/>
-                            </Style>
-
-                        </DataGridTextColumn.ElementStyle>
-                    </DataGridTextColumn>
-                    -->
-            <!--item: remove-->
-            <!--
-                    <DataGridTemplateColumn Width="0.1*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button x:Name="RemoveItemButton"
-                                        Content="X"
-                                        FontWeight="Light"
-                                        Width="55"
-                                        Padding="15,0,0,0"
-                                        Background="Transparent"
-                                        BorderThickness="0"
-                                        HorizontalAlignment="Right"
-                                        ClickMode="Press"
-                                        Command="{Binding Path=DataContext.RemoveSelectedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>-->
         </Grid>
 
-        <!--button Area: click to clear all items-->
         <Grid Row="4">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Button x:Name="ClearButton"
+                    Style="{StaticResource ButtonStyle}"
                     Grid.Column="0"
-                    FontSize="30"
-                    FontWeight="ExtraLight"
-                    Height="70"
-                    Content="c l e a r"
+                    Content="&#xE107;"
                     Command="{Binding ClearCommand}"/>
 
             <Button x:Name="ArrangeButton"
+                    Style="{StaticResource ButtonStyle}"
                     Grid.Column="1"
-                    FontSize="30"
-                    FontWeight="ExtraLight"
-                    Height="70"
-                    Content="a r r a n g e"
+                    Content="&#xE16E;"
                     Command="{Binding ArrangeCommand}"/>
-
-            <Button x:Name="RemoveButton"
-                    Grid.Column="2"
-                    FontSize="30"
-                    FontWeight="ExtraLight"
-                    Height="70"
-                    Content="r e m o v e"
-                    Command="{Binding RemoveSelectedCommand}"/>
-
-
 
             <!--test: 点按增加删除线，在纯TextBlock里面可以实现，在DataGrid里面不能实现-->
             <!--<TextBlock Text="{Binding SelectedToBuy.Name}" >

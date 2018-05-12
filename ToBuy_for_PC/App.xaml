@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:ToBuy_for_PC"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-
-        <Style x:Key="MyCheckBoxStyle" TargetType="{x:Type CheckBox}">
+        <!--DataGrid.CheckBox: IsDone-->
+        <Style x:Key="IsDoneStyle" TargetType="{x:Type CheckBox}">
             <Setter Property="Width" Value="20"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -15,9 +15,32 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
-       
+
+        <!--DataGrid.TextBlock: Name-->
+        <Style x:Key="NameStyle" TargetType="{x:Type TextBlock}" >
+            <Style.Triggers >
+                <DataTrigger Binding="{Binding SelectedToBuy.IsDone}" Value="true">
+                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                </DataTrigger>
+            </Style.Triggers>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <!--Button: clear; arrange-->
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="DimGray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="70"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+
+
+
 
     </Application.Resources>
-    
+
 </Application>
