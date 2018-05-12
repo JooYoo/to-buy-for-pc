@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using ToBuy_for_PC.ListWindow;
 using ToBuy_for_PC.ViewModel;
 
 namespace ToBuy_for_PC

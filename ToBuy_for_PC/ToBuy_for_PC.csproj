@@ -59,7 +59,7 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Commands\AddCommand.cs" />
     <Compile Include="Commands\ClearCommand.cs" />
-    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ListWindow\MainWindowViewModel.cs" />
     <Compile Include="Commands\RemoveSelectedCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
