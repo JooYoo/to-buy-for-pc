@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using ToBuy_for_PC.Model;
+using ToBuy_for_PC.DataContract;
 
 namespace ToBuy_for_PC.ViewModel
 {

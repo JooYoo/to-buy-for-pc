@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using ToBuy_for_PC.Annotations;
 using ToBuy_for_PC.Commands;
-using ToBuy_for_PC.Model;
+using ToBuy_for_PC.DataContract;
 
 namespace ToBuy_for_PC.ViewModel
 {

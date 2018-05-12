@@ -1,4 +1,4 @@
-﻿namespace ToBuy_for_PC.Model
+﻿namespace ToBuy_for_PC.DataContract
 {
     public class ToBuy
     {

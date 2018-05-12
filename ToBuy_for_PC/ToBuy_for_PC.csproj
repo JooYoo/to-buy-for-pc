@@ -55,7 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\ArrangeCommand.cs" />
-    <Compile Include="Model\ToBuy.cs" />
+    <Compile Include="DataContract\ToBuy.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Commands\AddCommand.cs" />
     <Compile Include="Commands\ClearCommand.cs" />

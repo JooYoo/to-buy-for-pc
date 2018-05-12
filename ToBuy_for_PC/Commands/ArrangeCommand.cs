@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using ToBuy_for_PC.Model;
+using ToBuy_for_PC.DataContract;
 using ToBuy_for_PC.ViewModel;
 
 namespace ToBuy_for_PC.Commands
