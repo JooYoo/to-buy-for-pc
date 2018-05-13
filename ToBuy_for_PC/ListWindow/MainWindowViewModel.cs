@@ -42,7 +42,6 @@ namespace ToBuy_for_PC.ListWindow
             {
                 selectedToBuy = value;
                 OnPropertyChanged();
-                DataAccess.ToSave(ToBuys);
             }
         }
 
