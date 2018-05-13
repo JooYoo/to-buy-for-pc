@@ -22,6 +22,8 @@ namespace ToBuy_for_PC.ListWindow
             // add new item to List
             var wantBuy = viewModel.WantBuy;
             viewModel.ToBuys.Add(new ToBuy{Name = wantBuy, IsDone = false});
+            //save data
+            viewModel.DataAccess.ToSave(viewModel.ToBuys);
             // clean up textbox
             viewModel.WantBuy = "";
         }

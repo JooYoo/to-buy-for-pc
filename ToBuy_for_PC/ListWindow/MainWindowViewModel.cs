@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using ToBuy_for_PC.Annotations;
 using ToBuy_for_PC.DataContract;
+using ToBuy_for_PC.Implementation;
 
 namespace ToBuy_for_PC.ListWindow
 {
@@ -13,6 +14,7 @@ namespace ToBuy_for_PC.ListWindow
         private ObservableCollection<ToBuy> toBuys;
         private ToBuy selectedToBuy;
 
+        public DataAccess DataAccess { get; set; }
 
         public string WantBuy
         {
@@ -40,6 +42,7 @@ namespace ToBuy_for_PC.ListWindow
             {
                 selectedToBuy = value;
                 OnPropertyChanged();
+                DataAccess.ToSave(ToBuys);
             }
         }
 
@@ -50,10 +53,12 @@ namespace ToBuy_for_PC.ListWindow
 
         public MainWindowViewModel()
         {
-            // Textbox
+            // instance DataAccess
+            DataAccess = new DataAccess();
+            // Textbox: placeholder
             WantBuy = "e.g. apple ...";
-            // DataGrid
-            ToBuys = ToBuyData();
+            // DataGrid: load data from Json
+            ToBuys = new ObservableCollection<ToBuy>(DataAccess.ToLoad());
             // ClearButton
             ClearCommand = new ClearCommand(this);
             // AddButton
@@ -63,18 +68,6 @@ namespace ToBuy_for_PC.ListWindow
             // arrange Button
             ArrangeCommand = new ArrangeCommand(this);
         }
-
-        // mock Data
-        private ObservableCollection<ToBuy> ToBuyData()
-        {
-            return new ObservableCollection<ToBuy>
-            {
-                new ToBuy{Name = "Buy1", IsDone = false},
-                new ToBuy{Name = "Buy2", IsDone = false},
-                new ToBuy{Name = "Buy3", IsDone = false}
-            };
-        }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         [NotifyPropertyChangedInvocator]

@@ -27,12 +27,12 @@ namespace ToBuy_for_PC.ListWindow
         public void Execute(object parameter)
         {
             var toBuys = viewModel.ToBuys;
-
-            // 按照假到真的顺序重新排序
+            // Reorder: false - true
             List<ToBuy> orderByIsDone = toBuys.OrderBy(x => x.IsDone).ToList();
-            // save new 
+            // display List
             viewModel.ToBuys =new ObservableCollection<ToBuy>(orderByIsDone);
-
+            // save data
+            viewModel.DataAccess.ToSave(viewModel.ToBuys);
         }
 
         public event EventHandler CanExecuteChanged;

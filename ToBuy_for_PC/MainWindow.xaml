@@ -68,7 +68,7 @@
                 <DataGrid.Columns >
                     <!--DataGrid.CheckBox: IsDone-->
                     <DataGridCheckBoxColumn ElementStyle="{StaticResource IsDoneStyle}"  Binding="{Binding IsDone,UpdateSourceTrigger=PropertyChanged}" Width="0.2*" />
-                    <!--DataGrid.CheckBox: IsDone-->
+                    <!--DataGrid.TextColumn: Name-->
                     <DataGridTextColumn ElementStyle="{StaticResource NameStyle}" Binding="{Binding Name, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
                     <!--DataGrid.Button.RemoveBt-->
                     <DataGridTemplateColumn Width="0.2*">
@@ -77,6 +77,7 @@
                                 <Button x:Name="RemoveItemButton"
                                         FontFamily="Segoe MDL2 Assets"
                                         Content="&#xE10A;"
+                                        Foreground="Gray"
                                         FontWeight="Light"
                                         Width="85"
                                         Padding="20,0,20,0"

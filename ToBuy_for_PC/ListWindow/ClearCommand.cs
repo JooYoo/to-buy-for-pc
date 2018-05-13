@@ -21,6 +21,8 @@ namespace ToBuy_for_PC.ListWindow
         public void Execute(object parameter)
         {
             viewModel.ToBuys = new ObservableCollection<ToBuy>();
+            // save data
+            viewModel.DataAccess.ToSave(viewModel.ToBuys);
         }
 
         public event EventHandler CanExecuteChanged;

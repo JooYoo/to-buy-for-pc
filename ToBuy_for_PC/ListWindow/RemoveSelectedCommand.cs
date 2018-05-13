@@ -18,9 +18,11 @@ namespace ToBuy_for_PC.ListWindow
 
         public void Execute(object parameter)
         {
-            // remove item
             var readyRemove = viewModel.SelectedToBuy;
+            // remove item
             viewModel.ToBuys.Remove(readyRemove);
+            // save change
+            viewModel.DataAccess.ToSave(viewModel.ToBuys);
         }
 
         public event EventHandler CanExecuteChanged;
