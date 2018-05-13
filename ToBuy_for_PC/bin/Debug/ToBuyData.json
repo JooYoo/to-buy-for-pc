@@ -1,10 +1,14 @@
 [
   {
-    "Name": "sample. beer",
+    "Name": "banana",
     "IsDone": false
   },
   {
-    "Name": "test",
+    "Name": "coke",
     "IsDone": false
+  },
+  {
+    "Name": "apple",
+    "IsDone": true
   }
 ]

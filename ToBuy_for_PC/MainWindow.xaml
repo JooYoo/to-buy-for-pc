@@ -20,10 +20,10 @@
         <!--Title area-->
         <Grid Row="0">
             <Label Name="TitleLable" 
-                   Content="To Buy"
-                   FontSize="40"
+                   Content="ToBuy"
+                   FontSize="45"
                    HorizontalAlignment="Left"
-                   Padding="20,25,0,0"
+                   Padding="15,45,0,0"
                    VerticalAlignment="Center"/>
         </Grid>
 
