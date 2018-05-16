@@ -1,0 +1,28 @@
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\ToBuy_for_PC_Unit Test.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\ToBuy_for_PC_Unit Test.pdb
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Castle.Core.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Moq.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\System.ValueTuple.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\ToBuy_for_PC.exe
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\ToBuy_for_PC.pdb
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\ToBuy_for_PC.exe.config
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Castle.Core.xml
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Moq.pdb
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Moq.xml
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\System.ValueTuple.xml
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\obj\Debug\ToBuy_for_PC_Unit Test.csprojResolveAssemblyReference.cache
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\obj\Debug\ToBuy_for_PC_Unit Test.csproj.CoreCompileInputs.cache
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\obj\Debug\ToBuy_for_PC_Unit Test.csproj.CopyComplete
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\obj\Debug\ToBuy_for_PC_Unit Test.dll
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC_Unit Test\obj\Debug\ToBuy_for_PC_Unit Test.pdb

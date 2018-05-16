@@ -5,6 +5,7 @@ using System.Windows.Input;
 using ToBuy_for_PC.Annotations;
 using ToBuy_for_PC.DataContract;
 using ToBuy_for_PC.Implementation;
+using ToBuy_for_PC.OperationContract;
 
 namespace ToBuy_for_PC.ListWindow
 {
@@ -14,7 +15,7 @@ namespace ToBuy_for_PC.ListWindow
         private ObservableCollection<ToBuy> toBuys;
         private ToBuy selectedToBuy;
 
-        public DataAccess DataAccess { get; set; }
+        public IDataAccess DataAccess { get; set; }
 
         public string WantBuy
         {
@@ -50,10 +51,10 @@ namespace ToBuy_for_PC.ListWindow
         public ICommand RemoveSelectedCommand { get; set; }
         public ICommand ArrangeCommand { get; set; }
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IDataAccess dataAccess = null)
         {
-            // instance DataAccess
-            DataAccess = new DataAccess();
+            // prepare for Unit Test
+            DataAccess = dataAccess ?? new DataAccess();
             // Textbox: placeholder
             WantBuy = "e.g. apple ...";
             // DataGrid: load data from Json

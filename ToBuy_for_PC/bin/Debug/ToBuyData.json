@@ -1,14 +1,14 @@
 [
   {
-    "Name": "banana",
-    "IsDone": false
-  },
-  {
-    "Name": "coke",
-    "IsDone": false
-  },
-  {
     "Name": "apple",
+    "IsDone": false
+  },
+  {
+    "Name": "orange",
+    "IsDone": false
+  },
+  {
+    "Name": "banana",
     "IsDone": true
   }
 ]
