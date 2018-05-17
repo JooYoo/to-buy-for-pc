@@ -6,7 +6,7 @@
         xmlns:listWindow="clr-namespace:ToBuy_for_PC.ListWindow"
         d:DataContext="{d:DesignInstance listWindow:MainWindowViewModel}"
         mc:Ignorable="d"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         Title="MainWindow" Height="800" Width="600">
 
     <Grid>
@@ -41,7 +41,15 @@
                 </Grid>
                 <Border BorderBrush="#AF1719" BorderThickness="1" Width="150" Background="DarkGray">
                     <StackPanel>
-                        <Button Name="btnRightMenuHide" Width="48" Height="48" Click="btnRightMenuHide_Click" Content="Hide" Visibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                        <Button Name="btnRightMenuHide" 
+                                Width="48" 
+                                Height="48" 
+                                Click="btnRightMenuHide_Click" 
+                                FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE700;" 
+                                Visibility="Hidden" 
+                                VerticalAlignment="Top" 
+                                HorizontalAlignment="Right"/>
                         <Button Content="1" Margin="8"/>
                         <Button Content="2" Margin="8"/>
                         <Button Content="3" Margin="8"/>
@@ -67,7 +75,16 @@
             <Label Content="column 2"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Bottom"/>
-            <Button Name="btnRightMenuShow" Width="48" Height="48" Click="btnRightMenuShow_Click" Content="Show" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <Button Name="btnRightMenuShow" 
+                    Width="48" 
+                    Height="48" 
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE700;"
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Right"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Click="btnRightMenuShow_Click" />
         </Grid>
 
 
@@ -137,7 +154,10 @@
             </DataGrid>
         </Grid>
 
-        <Grid Row="4">
+        <Grid Row="4" >
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
