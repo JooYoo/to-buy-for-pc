@@ -1,26 +1,14 @@
 [
   {
-    "Name": "Fri1",
+    "Name": "Sun1",
     "IsDone": false
   },
   {
-    "Name": "Fri2",
+    "Name": "Sun2",
     "IsDone": false
   },
   {
-    "Name": "Fri3",
-    "IsDone": false
-  },
-  {
-    "Name": "test",
-    "IsDone": false
-  },
-  {
-    "Name": "djis",
-    "IsDone": false
-  },
-  {
-    "Name": "fds",
+    "Name": "Sun3",
     "IsDone": false
   }
 ]
