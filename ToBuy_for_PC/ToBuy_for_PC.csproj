@@ -57,15 +57,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataContract\ShoppingList.cs" />
     <Compile Include="Implementation\DataAccess.cs" />
+    <Compile Include="OperationContract\IShoppingListManager.cs" />
+    <Compile Include="ListManager\ShoppingListManager.cs" />
     <Compile Include="ListWindow\ArrangeCommand.cs" />
     <Compile Include="DataContract\ToBuy.cs" />
     <Compile Include="OperationContract\IDataAccess.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ListWindow\AddCommand.cs" />
     <Compile Include="ListWindow\ClearCommand.cs" />
-    <Compile Include="ListWindow\MainWindowViewModel.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="ListWindow\RemoveSelectedCommand.cs" />
+    <Compile Include="SideDrawer\MondayCommand.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
