@@ -22,6 +22,8 @@ namespace ToBuy_for_PC.SideDrawer
             // find Monday list to display on DataGrid
             viewModel.ToBuys = new ObservableCollection<ToBuy>
                 (viewModel.ShoppingLists.Find(x => x.WeekDay == DayOfWeek.Monday).ToBuys);
+            // set DayTime
+            viewModel.DayWeekTime = DayOfWeek.Monday;
         }
         public event EventHandler CanExecuteChanged;
     }

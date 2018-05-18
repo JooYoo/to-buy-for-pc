@@ -19,13 +19,13 @@ namespace ToBuy_for_PC
         private string wantBuy;
         private ObservableCollection<ToBuy> toBuys;
         private ToBuy selectedToBuy;
-        private DateTime dayWeekTime; // todo: display current day of week
+        private DayOfWeek dayWeekTime; // todo: display current day of week
 
         public IDataAccess DataAccess { get; set; }
         public IShoppingListManager ShoppingListManager { get; set; }
 
         public List<ShoppingList> ShoppingLists { get; set; }
-        public DateTime DayWeekTime // todo: display current day of week
+        public DayOfWeek DayWeekTime // todo: display current day of week
         {
             get { return dayWeekTime; }
             set
@@ -80,6 +80,8 @@ namespace ToBuy_for_PC
             // prepare for Unit Test
             DataAccess = dataAccess ?? new DataAccess();
             ShoppingListManager = shoppingListManager ?? new ShoppingListManager();
+            // set WeekDay
+            DayWeekTime = DateTime.Today.DayOfWeek;
             // Get all data
             ShoppingLists = FakeShoppingLists();
             // Textbox: placeholder

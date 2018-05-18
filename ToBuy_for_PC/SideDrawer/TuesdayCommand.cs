@@ -22,6 +22,8 @@ namespace ToBuy_for_PC.SideDrawer
             // find Tuesday shoppingList
             viewModel.ToBuys = new ObservableCollection<ToBuy>
                 (viewModel.ShoppingLists.Find(x => x.WeekDay == DayOfWeek.Tuesday).ToBuys);
+            // set DayTime
+            viewModel.DayWeekTime = DayOfWeek.Tuesday;
         }
 
         public event EventHandler CanExecuteChanged;

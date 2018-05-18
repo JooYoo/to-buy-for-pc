@@ -63,7 +63,7 @@
         <!--Title area-->
         <Grid Row="0">
             <Label Name="TitleLable" 
-                   Content="ToBuy"
+                   Content="{Binding DayWeekTime}"
                    FontSize="45"
                    HorizontalAlignment="Left"
                    Padding="15,45,0,0"

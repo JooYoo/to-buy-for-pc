@@ -26,6 +26,8 @@ namespace ToBuy_for_PC.SideDrawer
            // get shoppingList for Saturday
            viewModel.ToBuys = new ObservableCollection<ToBuy>
                 (viewModel.ShoppingLists.Find(x=>x.WeekDay == DayOfWeek.Saturday).ToBuys);
+            // set DayTime
+            viewModel.DayWeekTime = DayOfWeek.Saturday;
         }
 
         public event EventHandler CanExecuteChanged;
