@@ -21,18 +21,18 @@ namespace ToBuy_for_PC
         // Textbox place holder
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
+            TextBox textBox = (TextBox) sender;
             textBox.Text = String.Empty;
         }
         private void TextBox_OnLostFocus(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
+            TextBox textBox = (TextBox) sender;
             if (textBox.Text == String.Empty)
             {
                 textBox.Text = "e.g. apple ...";
             }
         }
-
+        
         // close app: save data or cancel
         protected override void OnClosing(CancelEventArgs e)
         {
@@ -42,9 +42,9 @@ namespace ToBuy_for_PC
             }
             else
             {
-                // todo: save data
-                //var toBuys = ((MainWindowViewModel)DataContext).ToBuys;
-                //((MainWindowViewModel)DataContext).DataAccess.ToSave(toBuys);
+                // save data
+                var shoppingLists = ((MainWindowViewModel)DataContext).ShoppingLists;
+                ((MainWindowViewModel)DataContext).DataAccess.ToSave(shoppingLists);
             }
         }
         //

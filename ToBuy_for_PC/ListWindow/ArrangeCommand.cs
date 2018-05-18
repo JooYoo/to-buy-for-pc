@@ -32,8 +32,8 @@ namespace ToBuy_for_PC.ListWindow
             targetShoppingList.ToBuys = orderByIsDone;
             // display List
             viewModel.ToBuys = new ObservableCollection<ToBuy>(orderByIsDone);
-            // todo: save data
-            //viewModel.DataAccess.ToSave(viewModel.ToBuys);
+            // save data
+            viewModel.DataAccess.ToSave(viewModel.ShoppingLists);
         }
 
         public event EventHandler CanExecuteChanged;

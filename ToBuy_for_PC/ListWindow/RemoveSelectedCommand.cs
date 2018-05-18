@@ -26,8 +26,8 @@ namespace ToBuy_for_PC.ListWindow
             // display on screen
             viewModel.ToBuys.Remove(readyRemove);
 
-            // Todo: save change
-            //viewModel.DataAccess.ToSave(viewModel.ToBuys);
+            // save change
+            viewModel.DataAccess.ToSave(viewModel.ShoppingLists);
         }
 
         public event EventHandler CanExecuteChanged;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft.Json;
 using ToBuy_for_PC.DataContract;
@@ -10,17 +9,6 @@ namespace ToBuy_for_PC.Implementation
 {
     public class DataAccess : IDataAccess
     {
-        // todo: delete
-        //public void ToSave(ObservableCollection<ToBuy> toBuys)
-        //{
-        //    using (StreamWriter file = File.CreateText(@"ToBuyData.json"))
-        //    {
-        //        var serializer = new JsonSerializer();
-        //        serializer.Formatting = Formatting.Indented;    // Json formating 
-        //        serializer.Serialize(file, toBuys);
-        //    }
-        //}
-
         public void ToSave(List<ShoppingList> shoppingLists)
         {
             using (StreamWriter file = File.CreateText(@"ToBuyData.json"))
@@ -30,30 +18,6 @@ namespace ToBuy_for_PC.Implementation
                 serializer.Serialize(file, shoppingLists);
             }
         }
-
-        // todo: delete
-        //public List<ToBuy> ToLoad()
-        //{
-        //    try
-        //    {
-        //        using (StreamReader file = File.OpenText(@"ToBuyData.json"))
-        //        {
-        //            var deserializer = new JsonSerializer();
-        //            List<ToBuy> result = (List<ToBuy>)deserializer.Deserialize(file, typeof(List<ToBuy>));
-
-        //            return result;
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        return new List<ToBuy>()
-        //        {
-        //            new ToBuy{Name = "sample. apple", IsDone = false},
-        //            new ToBuy{Name = "sample. pizza", IsDone = false},
-        //            new ToBuy{Name = "sample. beer", IsDone = false}
-        //        };
-        //    }
-        //}
 
         public List<ShoppingList> ToLoad()
         {
@@ -75,58 +39,37 @@ namespace ToBuy_for_PC.Implementation
                 ShoppingList MonList = new ShoppingList
                 {
                     WeekDay = DayOfWeek.Monday,
-                    ToBuys = new List<ToBuy>
-               {
-                   new ToBuy { Name = "Apple", IsDone = false},
-               }
+                    ToBuys = new List<ToBuy> { new ToBuy { Name = "Apple", IsDone = false } }
                 };
                 ShoppingList TueList = new ShoppingList
                 {
                     WeekDay = DayOfWeek.Tuesday,
-                    ToBuys = new List<ToBuy>
-                {
-                    new ToBuy { Name = "Banana", IsDone = false},
-                }
+                    ToBuys = new List<ToBuy> { new ToBuy { Name = "Banana", IsDone = false } }
                 };
                 ShoppingList WedList = new ShoppingList
                 {
                     WeekDay = DayOfWeek.Wednesday,
-                    ToBuys = new List<ToBuy>
-                {
-                    new ToBuy { Name = "Cake", IsDone = false},
-                }
+                    ToBuys = new List<ToBuy> { new ToBuy { Name = "Cake", IsDone = false } }
                 };
                 ShoppingList ThurList = new ShoppingList
                 {
                     WeekDay = DayOfWeek.Thursday,
-                    ToBuys = new List<ToBuy>
-                {
-                    new ToBuy { Name = "Donut", IsDone = false},
-                }
+                    ToBuys = new List<ToBuy> { new ToBuy { Name = "Donut", IsDone = false } }
                 };
                 ShoppingList FridayList = new ShoppingList
                 {
                     WeekDay = DayOfWeek.Friday,
-                    ToBuys = new List<ToBuy>
-                {
-                    new ToBuy { Name = "Egg", IsDone = false},
-                }
+                    ToBuys = new List<ToBuy> { new ToBuy { Name = "Egg", IsDone = false } }
                 };
                 ShoppingList SatList = new ShoppingList
                 {
                     WeekDay = DayOfWeek.Saturday,
-                    ToBuys = new List<ToBuy>
-                {
-                    new ToBuy { Name = "Fig", IsDone = false},
-                }
+                    ToBuys = new List<ToBuy> { new ToBuy { Name = "Fig", IsDone = false } }
                 };
                 ShoppingList SunList = new ShoppingList
                 {
                     WeekDay = DayOfWeek.Sunday,
-                    ToBuys = new List<ToBuy>
-                {
-                    new ToBuy { Name = "Grape", IsDone = false},
-                }
+                    ToBuys = new List<ToBuy> { new ToBuy { Name = "Grape", IsDone = false } }
                 };
 
                 shoppingLists.Add(MonList);

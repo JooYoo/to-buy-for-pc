@@ -48,10 +48,6 @@
       {
         "Name": "Egg",
         "IsDone": false
-      },
-      {
-        "Name": "test01",
-        "IsDone": false
       }
     ],
     "WeekDay": 5,
