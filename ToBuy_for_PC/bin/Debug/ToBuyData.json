@@ -1,14 +1,83 @@
 [
   {
-    "Name": "Fri1",
+    "ToBuys": [
+      {
+        "Name": "Apple",
+        "IsDone": false
+      }
+    ],
+    "WeekDay": 1,
+    "Name": null,
     "IsDone": false
   },
   {
-    "Name": "Fri3",
+    "ToBuys": [
+      {
+        "Name": "Banana",
+        "IsDone": false
+      }
+    ],
+    "WeekDay": 2,
+    "Name": null,
     "IsDone": false
   },
   {
-    "Name": "Fri2",
-    "IsDone": true
+    "ToBuys": [
+      {
+        "Name": "Cake",
+        "IsDone": false
+      }
+    ],
+    "WeekDay": 3,
+    "Name": null,
+    "IsDone": false
+  },
+  {
+    "ToBuys": [
+      {
+        "Name": "Donut",
+        "IsDone": false
+      }
+    ],
+    "WeekDay": 4,
+    "Name": null,
+    "IsDone": false
+  },
+  {
+    "ToBuys": [
+      {
+        "Name": "Egg",
+        "IsDone": false
+      },
+      {
+        "Name": "test01",
+        "IsDone": false
+      }
+    ],
+    "WeekDay": 5,
+    "Name": null,
+    "IsDone": false
+  },
+  {
+    "ToBuys": [
+      {
+        "Name": "Fig",
+        "IsDone": false
+      }
+    ],
+    "WeekDay": 6,
+    "Name": null,
+    "IsDone": false
+  },
+  {
+    "ToBuys": [
+      {
+        "Name": "Grape",
+        "IsDone": false
+      }
+    ],
+    "WeekDay": 0,
+    "Name": null,
+    "IsDone": false
   }
 ]

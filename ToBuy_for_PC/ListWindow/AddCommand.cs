@@ -28,6 +28,7 @@ namespace ToBuy_for_PC.ListWindow
             viewModel.ToBuys.Add(newToBuy);
 
             //todo:save ShoppingLists
+            viewModel.DataAccess.ToSave(viewModel.ShoppingLists);
             //viewModel.DataAccess.ToSave(viewModel.ToBuys);
 
             // clean up textbox
