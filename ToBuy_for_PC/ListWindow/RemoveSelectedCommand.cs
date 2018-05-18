@@ -15,14 +15,19 @@ namespace ToBuy_for_PC.ListWindow
         {
             return true;
         }
-
         public void Execute(object parameter)
         {
+            // get the removeBt
             var readyRemove = viewModel.SelectedToBuy;
+            // find specific ShoppingList
+            var targetShoppingList = viewModel.ShoppingLists.Find(x => x.WeekDay == viewModel.DayWeekTime);
             // remove item
+            targetShoppingList.ToBuys.Remove(readyRemove);
+            // display on screen
             viewModel.ToBuys.Remove(readyRemove);
-            // save change
-            viewModel.DataAccess.ToSave(viewModel.ToBuys);
+
+            // Todo: save change
+            //viewModel.DataAccess.ToSave(viewModel.ToBuys);
         }
 
         public event EventHandler CanExecuteChanged;

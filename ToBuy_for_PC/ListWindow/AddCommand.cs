@@ -29,6 +29,7 @@ namespace ToBuy_for_PC.ListWindow
 
             //todo:save ShoppingLists
             //viewModel.DataAccess.ToSave(viewModel.ToBuys);
+
             // clean up textbox
             viewModel.WantBuy = "";
         }
