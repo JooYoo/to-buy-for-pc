@@ -1,10 +1,14 @@
 [
   {
-    "Name": "Sat1",
+    "Name": "Fri1",
     "IsDone": false
   },
   {
-    "Name": "Sat3",
+    "Name": "Fri3",
     "IsDone": false
+  },
+  {
+    "Name": "Fri2",
+    "IsDone": true
   }
 ]

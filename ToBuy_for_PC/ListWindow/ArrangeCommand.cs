@@ -26,13 +26,16 @@ namespace ToBuy_for_PC.ListWindow
 
         public void Execute(object parameter)
         {
-            var toBuys = viewModel.ToBuys;
+            // find specific ShoppingList
+            var targetShoppingList = viewModel.ShoppingLists.Find(x => x.WeekDay == viewModel.DayWeekTime);
             // Reorder: false - true
-            List<ToBuy> orderByIsDone = toBuys.OrderBy(x => x.IsDone).ToList();
+            var orderByIsDone = targetShoppingList.ToBuys.OrderBy(x => x.IsDone).ToList();
+            // new order list is the Current List
+            targetShoppingList.ToBuys = orderByIsDone;
             // display List
-            viewModel.ToBuys =new ObservableCollection<ToBuy>(orderByIsDone);
-            // save data
-            viewModel.DataAccess.ToSave(viewModel.ToBuys);
+            viewModel.ToBuys = new ObservableCollection<ToBuy>(orderByIsDone);
+            // todo: save data
+            //viewModel.DataAccess.ToSave(viewModel.ToBuys);
         }
 
         public event EventHandler CanExecuteChanged;
