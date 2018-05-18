@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -23,7 +22,6 @@ namespace ToBuy_for_PC.ListWindow
             }
             return true;
         }
-
         public void Execute(object parameter)
         {
             // find specific ShoppingList
