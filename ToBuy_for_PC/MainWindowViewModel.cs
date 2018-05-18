@@ -95,8 +95,14 @@ namespace ToBuy_for_PC
             RemoveSelectedCommand = new RemoveSelectedCommand(this);
             // arrange Button
             ArrangeCommand = new ArrangeCommand(this);
-            // Monday Button
+            // Monday ... Sunday Button
             MondayCommand = new MondayCommand(this);
+            TuesdayCommand = new TuesdayCommand(this);
+            WednesdayCommand = new WednesdayCommand(this);
+            ThursdayCommand = new ThursdayCommand(this);
+            FridayCommand = new FridayCommand(this);
+            SaturdayCommand = new SaturdayCommand(this);
+            SundayCommand = new SundayCommand(this);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

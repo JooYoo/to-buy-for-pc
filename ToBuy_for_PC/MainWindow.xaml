@@ -50,12 +50,12 @@
                                 VerticalAlignment="Top" 
                                 HorizontalAlignment="Right"/>
                         <Button Content="1" Margin="8" Command="{Binding MondayCommand}"/>
-                        <Button Content="2" Margin="8"/>
-                        <Button Content="3" Margin="8"/>
-                        <Button Content="4" Margin="8"/>
-                        <Button Content="5" Margin="8"/>
-                        <Button Content="6" Margin="8"/>
-                        <Button Content="7" Margin="8"/>
+                        <Button Content="2" Margin="8" Command="{Binding TuesdayCommand}"/>
+                        <Button Content="3" Margin="8" Command="{Binding WednesdayCommand}"/>
+                        <Button Content="4" Margin="8" Command="{Binding ThursdayCommand}"/>
+                        <Button Content="5" Margin="8" Command="{Binding FridayCommand}"/>
+                        <Button Content="6" Margin="8" Command="{Binding SaturdayCommand}"/>
+                        <Button Content="7" Margin="8" Command="{Binding SundayCommand}"/>
                     </StackPanel>
                 </Border>
             </StackPanel>
