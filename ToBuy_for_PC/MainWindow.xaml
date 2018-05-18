@@ -26,7 +26,6 @@
 
 
         <!--SideDrawer-right mainBody-->
-      
             <StackPanel 
                 Name="pnlRightMenu" 
                 ZIndex="1" 
@@ -39,7 +38,7 @@
                 <Grid>
                     <!--这里加入的元素会随着StackPanel一起挤向左方-->
                 </Grid>
-                <Border BorderBrush="#AF1719" BorderThickness="1" Width="150" Background="DarkGray">
+                <Border BorderThickness="0" Width="150" Background="DarkGray">
                     <StackPanel>
                         <Button Name="btnRightMenuHide" 
                                 Width="48" 
@@ -50,7 +49,7 @@
                                 Visibility="Hidden" 
                                 VerticalAlignment="Top" 
                                 HorizontalAlignment="Right"/>
-                        <Button Content="1" Margin="8"/>
+                        <Button Content="1" Margin="8" Command="{Binding MondayCommand}"/>
                         <Button Content="2" Margin="8"/>
                         <Button Content="3" Margin="8"/>
                         <Button Content="4" Margin="8"/>
@@ -60,8 +59,6 @@
                     </StackPanel>
                 </Border>
             </StackPanel>
-       
-
 
         <!--Title area-->
         <Grid Row="0">
@@ -176,20 +173,15 @@
                     Content="&#xE16E;"
                     Command="{Binding ArrangeCommand}"/>
         </Grid>
-
-
-
-
-
     </Grid>
 
     <!--SideDrawer-right Animation-->
     <Window.Resources>
         <Storyboard x:Key="sbShowRightMenu" >
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,-150,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,-150,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:0.3" />
         </Storyboard>
         <Storyboard x:Key="sbHideRightMenu">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="0,0,-150,0" AccelerationRatio=".9" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="0,0,-150,0" AccelerationRatio=".9" Duration="0:0:0.15" />
         </Storyboard>
     </Window.Resources>
 </Window>

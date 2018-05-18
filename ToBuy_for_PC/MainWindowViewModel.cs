@@ -10,6 +10,7 @@ using ToBuy_for_PC.Implementation;
 using ToBuy_for_PC.ListManager;
 using ToBuy_for_PC.ListWindow;
 using ToBuy_for_PC.OperationContract;
+using ToBuy_for_PC.SideDrawer;
 
 namespace ToBuy_for_PC
 {
@@ -23,8 +24,8 @@ namespace ToBuy_for_PC
         public IDataAccess DataAccess { get; set; }
         public IShoppingListManager ShoppingListManager { get; set; }
 
-        // todo: display current day of week
-        public DateTime DayWeekTime
+        public List<ShoppingList> ShoppingLists { get; set; }
+        public DateTime DayWeekTime // todo: display current day of week
         {
             get { return dayWeekTime; }
             set
@@ -79,11 +80,13 @@ namespace ToBuy_for_PC
             // prepare for Unit Test
             DataAccess = dataAccess ?? new DataAccess();
             ShoppingListManager = shoppingListManager ?? new ShoppingListManager();
+            // Get all data
+            ShoppingLists = FakeShoppingLists();
             // Textbox: placeholder
             WantBuy = "e.g. apple ...";
             // DataGrid: load data from Json
             // Todo: temporary use fake shoppingList for initialize
-            ToBuys = new ObservableCollection<ToBuy>(ShoppingListManager.TodayShoppingList(FakeShoppingLists()));
+            ToBuys = new ObservableCollection<ToBuy>(ShoppingListManager.TodayShoppingList(ShoppingLists));
             // ClearButton
             ClearCommand = new ClearCommand(this);
             // AddButton
@@ -92,6 +95,8 @@ namespace ToBuy_for_PC
             RemoveSelectedCommand = new RemoveSelectedCommand(this);
             // arrange Button
             ArrangeCommand = new ArrangeCommand(this);
+            // Monday Button
+            MondayCommand = new MondayCommand(this);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

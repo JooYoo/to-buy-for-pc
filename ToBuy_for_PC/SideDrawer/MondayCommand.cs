@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
-using ToBuy_for_PC.ListWindow;
+using ToBuy_for_PC.DataContract;
 
 namespace ToBuy_for_PC.SideDrawer
 {
-    public class MondayCommand:ICommand
+    public class MondayCommand : ICommand
     {
         private readonly MainWindowViewModel viewModel;
         public MondayCommand(MainWindowViewModel mainWindowViewModel)
@@ -18,14 +15,14 @@ namespace ToBuy_for_PC.SideDrawer
 
         public bool CanExecute(object parameter)
         {
-            throw new NotImplementedException();
+            return true;
         }
-
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            // find Monday list to display on DataGrid
+            viewModel.ToBuys = new ObservableCollection<ToBuy>
+                (viewModel.ShoppingLists.Find(x => x.WeekDay == DayOfWeek.Monday).ToBuys);
         }
-
         public event EventHandler CanExecuteChanged;
     }
 }
