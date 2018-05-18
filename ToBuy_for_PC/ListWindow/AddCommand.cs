@@ -16,13 +16,18 @@ namespace ToBuy_for_PC.ListWindow
         {
             return true;
         }
-
         public void Execute(object parameter)
         {
-            // add new item to List
-            var wantBuy = viewModel.WantBuy;
-            viewModel.ToBuys.Add(new ToBuy{Name = wantBuy, IsDone = false});
-            //save data
+            // create new ToBuy
+            ToBuy newToBuy = new ToBuy{Name = viewModel.WantBuy, IsDone = false};
+            // find specific ShoppingList
+            var targetShoppingList = viewModel.ShoppingLists.Find(x => x.WeekDay == viewModel.DayWeekTime);
+            // add newToBuy to the List for saving
+            targetShoppingList.ToBuys.Add(newToBuy);
+            // display on screen
+            viewModel.ToBuys.Add(newToBuy);
+
+            //todo:save ShoppingLists
             viewModel.DataAccess.ToSave(viewModel.ToBuys);
             // clean up textbox
             viewModel.WantBuy = "";

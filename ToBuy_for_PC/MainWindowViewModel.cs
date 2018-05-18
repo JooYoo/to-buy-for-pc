@@ -80,10 +80,12 @@ namespace ToBuy_for_PC
             // prepare for Unit Test
             DataAccess = dataAccess ?? new DataAccess();
             ShoppingListManager = shoppingListManager ?? new ShoppingListManager();
-            // set WeekDay
-            DayWeekTime = DateTime.Today.DayOfWeek;
+
             // Get all data
             ShoppingLists = FakeShoppingLists();
+
+            // set WeekDay
+            DayWeekTime = DateTime.Today.DayOfWeek;
             // Textbox: placeholder
             WantBuy = "e.g. apple ...";
             // DataGrid: load data from Json
