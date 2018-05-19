@@ -34,3 +34,4 @@ C:\Users\yzhu\Desktop\to-buy-for-pc\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.csproj.G
 C:\Users\yzhu\Desktop\to-buy-for-pc\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.csproj.CoreCompileInputs.cache
 C:\Users\yzhu\Desktop\to-buy-for-pc\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.exe
 C:\Users\yzhu\Desktop\to-buy-for-pc\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.pdb
+C:\Users\JooYoo\Desktop\ToBuy_for_PC\ToBuy_for_PC\obj\Debug\ToBuy_for_PC.csprojResolveAssemblyReference.cache

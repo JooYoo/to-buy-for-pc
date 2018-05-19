@@ -12,103 +12,127 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.8*"/>
-            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.35*"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="0.29*"/>
         </Grid.RowDefinitions>
 
-        <!--<Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>-->
+            <ColumnDefinition Width="6.5*"/>
+            <!--<ColumnDefinition Width="5*"/>-->
+        </Grid.ColumnDefinitions>
 
 
         <!--SideDrawer-right mainBody-->
-            <StackPanel 
-                Name="pnlRightMenu" 
+        <StackPanel
                 ZIndex="1" 
-                Grid.Row="0" Grid.RowSpan="5"  
+                Grid.Row="0" Grid.RowSpan="5" 
+                Grid.Column="0" Grid.ColumnSpan="2"
                 Orientation="Horizontal" 
-                Height="800"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Margin="0,0,-150,0">
+                Height="770"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">
+            <Grid>
+                <!--这里加入的元素会随着StackPanel一起挤向左方-->
+            </Grid>
+            <Border Name="bodDrawer" BorderThickness="0" Width="80" Background="WhiteSmoke">
                 <Grid>
-                    <!--这里加入的元素会随着StackPanel一起挤向左方-->
-                </Grid>
-                <Border BorderThickness="0" Width="150" Background="DarkGray">
-                    <StackPanel>
-                        <Button Name="btnRightMenuHide" 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.ColumnSpan="2">
+                        <Button Name="btnDrawer" 
                                 Width="48" 
-                                Height="48" 
-                                Click="btnRightMenuHide_Click" 
+                                Height="55" 
+                                Margin="16,18,0,30"
+                                Click="btnDrawer_Click" 
                                 FontFamily="Segoe MDL2 Assets"
                                 Content="&#xE700;" 
-                                Visibility="Hidden" 
+                                FontSize="20"
+                                Background="Transparent"
+                                Foreground="Black"
+                                BorderThickness="0"
                                 VerticalAlignment="Top" 
-                                HorizontalAlignment="Right"/>
-                        <Button Content="1" Margin="8" Command="{Binding MondayCommand}"/>
-                        <Button Content="2" Margin="8" Command="{Binding TuesdayCommand}"/>
-                        <Button Content="3" Margin="8" Command="{Binding WednesdayCommand}"/>
-                        <Button Content="4" Margin="8" Command="{Binding ThursdayCommand}"/>
-                        <Button Content="5" Margin="8" Command="{Binding FridayCommand}"/>
-                        <Button Content="6" Margin="8" Command="{Binding SaturdayCommand}"/>
-                        <Button Content="7" Margin="8" Command="{Binding SundayCommand}"/>
+                                HorizontalAlignment="Left"/>
+                        <Button HorizontalAlignment="Left"
+                            FontFamily="Segoe MDL2 Assets" 
+                            Content="&#xF146;" 
+                            FontSize="20" 
+                            Background="Transparent" 
+                            BorderThickness="0" 
+                            Height = "50" 
+                            Margin="12" 
+                            Command="{Binding MondayCommand}"/>
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF147;" FontSize="20" Height = "50" Margin="12" Command="{Binding TuesdayCommand}"/>
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF148;" FontSize="20" Height = "50" Margin="12" Command="{Binding WednesdayCommand}"/>
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF149;" FontSize="20" Height = "50" Margin="12" Command="{Binding ThursdayCommand}"/>
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF14A;" FontSize="20" Height = "50" Margin="12" Command="{Binding FridayCommand}"/>
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF14B;" FontSize="20" Height = "50" Margin="12" Command="{Binding SaturdayCommand}"/>
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xF14C;" FontSize="20" Height = "50" Margin="12" Command="{Binding SundayCommand}"/>
+                        <Button Name="BtnSetting" 
+                            Width="48" 
+                            Height="55" 
+                            Margin="18,80,0,0"
+                            FontFamily="Segoe MDL2 Assets"
+                            Content="&#xE115;" 
+                            FontSize="20"
+                            Background="Transparent"
+                            Foreground="Black"
+                            BorderThickness="0"
+                            VerticalAlignment="Top" 
+                            HorizontalAlignment="Left"/>
                     </StackPanel>
-                </Border>
-            </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Monday"
+                                   Height="55" 
+                                   Margin="66,108,0,30"
+                                   HorizontalAlignment="Right"/>
+                    </StackPanel>
+                </Grid>
+             
+            </Border>
+        </StackPanel>
 
         <!--Title area-->
-        <Grid Row="0">
+        <Grid Row="0" Column="1">
             <Label Name="TitleLable" 
                    Content="{Binding DayWeekTime}"
-                   FontSize="45"
+                   FontSize="40"
+                   FontWeight="Light"
                    HorizontalAlignment="Left"
-                   Padding="15,45,0,0"
-                   VerticalAlignment="Center"/>
-            <!--SideDrawer-showBt-->
-            <Label Content="column 2"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom"/>
-            <Button Name="btnRightMenuShow" 
-                    Width="48" 
-                    Height="48" 
-                    FontFamily="Segoe MDL2 Assets"
-                    Content="&#xE700;"
-                    VerticalAlignment="Top" 
-                    HorizontalAlignment="Right"
-                    Background="Transparent"
-                    BorderThickness="0"
-                    Click="btnRightMenuShow_Click" />
+                   Padding="20,25,0,0"
+                   VerticalAlignment="Top"/>
         </Grid>
 
 
 
         <!--Enter Item Area: press Enter to add Item to list-->
-        <Grid Row="1" >
+        <Grid Row="1" Column="1">
             <TextBox Name="ItemTextbox"
                      FontSize="30"
                      FontWeight="UltraLight"
                      FontStyle="Italic"
                      Foreground="Gray"
-                     BorderThickness="0"
+                     BorderThickness="2"
                      Padding="20,15,0,0"
                      Background="LightGray"
                      VerticalAlignment="Center"
                      HorizontalContentAlignment="Left"
                      GotFocus="TextBox_GotFocus"
                      LostFocus="TextBox_OnLostFocus"
-                     Text="{Binding WantBuy,UpdateSourceTrigger=PropertyChanged}" Height="76" Margin="0,0,-0.4,0">
+                     Text="{Binding WantBuy,UpdateSourceTrigger=PropertyChanged}" Height="76" Margin="10,6,10.4,6">
                 <TextBox.InputBindings>
                     <KeyBinding Command="{Binding AddCommand}" Key="Enter"/>
                 </TextBox.InputBindings>
             </TextBox>
+            <Separator Margin="0,104,0,0" Height="4"/>
         </Grid>
 
 
-        <Grid Row="2">
+        <Grid Row="2" Column="1">
 
             <DataGrid x:Name="DataGridList"
                       HeadersVisibility="None"
@@ -116,6 +140,7 @@
                       SelectedItem="{Binding SelectedToBuy}"
                       CanUserAddRows="False"
                       ColumnWidth="*"
+                      
                       FontSize="25"
                       Background="Transparent"
                       BorderThickness="0"
@@ -151,7 +176,7 @@
             </DataGrid>
         </Grid>
 
-        <Grid Row="4" >
+        <Grid Row="4" Column="1">
             <Grid.Effect>
                 <DropShadowEffect/>
             </Grid.Effect>
@@ -173,15 +198,16 @@
                     Content="&#xE16E;"
                     Command="{Binding ArrangeCommand}"/>
         </Grid>
+
     </Grid>
 
     <!--SideDrawer-right Animation-->
     <Window.Resources>
-        <Storyboard x:Key="sbShowRightMenu" >
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,-150,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:0.3" />
+        <Storyboard x:Key="sbShowDrawer" >
+            <DoubleAnimation Storyboard.TargetProperty="Width" From="80" To="350" DecelerationRatio=".9" Duration="0:0:0.3"/>
         </Storyboard>
-        <Storyboard x:Key="sbHideRightMenu">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="0,0,-150,0" AccelerationRatio=".9" Duration="0:0:0.15" />
+        <Storyboard x:Key="sbHideDrawer">
+            <DoubleAnimation  Storyboard.TargetProperty="Width" From="350" To="80" DecelerationRatio=".9" Duration="0:0:0.15"/>
         </Storyboard>
     </Window.Resources>
 </Window>

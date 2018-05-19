@@ -21,18 +21,18 @@ namespace ToBuy_for_PC
         // Textbox place holder
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = (TextBox) sender;
+            TextBox textBox = (TextBox)sender;
             textBox.Text = String.Empty;
         }
         private void TextBox_OnLostFocus(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = (TextBox) sender;
+            TextBox textBox = (TextBox)sender;
             if (textBox.Text == String.Empty)
             {
                 textBox.Text = "e.g. apple ...";
             }
         }
-        
+
         // close app: save data or cancel
         protected override void OnClosing(CancelEventArgs e)
         {
@@ -47,30 +47,26 @@ namespace ToBuy_for_PC
                 ((MainWindowViewModel)DataContext).DataAccess.ToSave(shoppingLists);
             }
         }
-        //
-        private void btnRightMenuHide_Click(object sender, RoutedEventArgs e)
+
+        //Side Drawer
+        private bool IsShowMenu;
+        private void btnDrawer_Click(object sender, RoutedEventArgs e)
         {
-            ShowHideMenu("sbHideRightMenu", btnRightMenuHide, btnRightMenuShow, pnlRightMenu);
+            if (IsShowMenu == false)
+            {
+                ShowHideMenu("sbShowDrawer", bodDrawer);
+                IsShowMenu = true;
+            }
+            else
+            {
+                ShowHideMenu("sbHideDrawer", bodDrawer);
+                IsShowMenu = false;
+            }
         }
-        private void btnRightMenuShow_Click(object sender, RoutedEventArgs e)
-        {
-            ShowHideMenu("sbShowRightMenu", btnRightMenuHide, btnRightMenuShow, pnlRightMenu);
-        }
-        private void ShowHideMenu(string Storyboard, Button btnHide, Button btnShow, StackPanel pnl)
+        private void ShowHideMenu(string Storyboard, Border border)
         {
             Storyboard sb = Resources[Storyboard] as Storyboard;
-            sb.Begin(pnl);
-
-            if (Storyboard.Contains("Show"))
-            {
-                btnHide.Visibility = Visibility.Visible;
-                //btnShow.Visibility = Visibility.Hidden;
-            }
-            else if (Storyboard.Contains("Hide"))
-            {
-                //btnHide.Visibility = Visibility.Hidden;
-                btnShow.Visibility = Visibility.Visible;
-            }
+            sb.Begin(border);
         }
     }
 }
