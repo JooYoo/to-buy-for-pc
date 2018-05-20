@@ -39,9 +39,11 @@
         </Style>
 
         <!--DrawerButtonStyle-->
-        <Style x:Key="DrawerBtn" TargetType="{x:Type Button}">
+        <Style x:Key="WeekDayBtn" TargetType="{x:Type Button}">
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontWeight" Value="ExtraLight"/>
+            <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Margin" Value="12"/>

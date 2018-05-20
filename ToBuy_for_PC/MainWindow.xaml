@@ -57,45 +57,51 @@
                                 BorderThickness="0"
                                 VerticalAlignment="Top" 
                                 HorizontalAlignment="Left"/>
-                        <Button Style="{StaticResource DrawerBtn}"
-                                FontFamily="Segoe MDL2 Assets" 
-                                Content="&#xF146;" 
+                        <Button Style="{StaticResource WeekDayBtn}"
+                                Content="&#x24C2;    Monday" 
                                 Command="{Binding MondayCommand}"/>
-                        <Button Style="{StaticResource DrawerBtn}"
-                                FontFamily="Segoe MDL2 Assets" 
-                                Content="&#xF147;" 
+                        <Button Style="{StaticResource WeekDayBtn}"
+                                Content="&#x24C9;    Tuesday" 
                                 Command="{Binding TuesdayCommand}"/>
-                        <Button Style="{StaticResource DrawerBtn}"
-                                FontFamily="Segoe MDL2 Assets" 
-                                Content="&#xF148;" 
+                        <Button Style="{StaticResource WeekDayBtn}"
+                                Content="&#x24CC;    Wednesday" 
                                 Command="{Binding WednesdayCommand}"/>
-                        <Button Style="{StaticResource DrawerBtn}"
-                                FontFamily="Segoe MDL2 Assets" Content="&#xF149;" 
+                        <Button Style="{StaticResource WeekDayBtn}"
+                                Content="&#x24E3;    Thursday" 
                                 Command="{Binding ThursdayCommand}"/>
-                        <Button Style="{StaticResource DrawerBtn}"
-                                FontFamily="Segoe MDL2 Assets" Content="&#xF14A;" 
+                        <Button Style="{StaticResource WeekDayBtn}"
+                                Content="&#x24BB;    Friday" 
                                 Command="{Binding FridayCommand}"/>
-                        <Button Style="{StaticResource DrawerBtn}"
-                                FontFamily="Segoe MDL2 Assets" Content="&#xF14B;" 
+                        <Button Style="{StaticResource WeekDayBtn}"
+                                Content="&#x24C8;    Saturday" 
                                 Command="{Binding SaturdayCommand}"/>
-                        <Button Style="{StaticResource DrawerBtn}"
-                                FontFamily="Segoe MDL2 Assets" 
-                                Content="&#xF14C;" 
+                        <Button Style="{StaticResource WeekDayBtn}"
+                                Content="&#x24CA;    Sunday" 
                                 Command="{Binding SundayCommand}"/>
                         <Button Name="BtnSetting"
-                                Style="{StaticResource DrawerBtn}"
-                            Margin="0,80,0,0"
-                                Padding="30,0,0,0"
-                            FontFamily="Segoe MDL2 Assets"
-                            Content="&#xE115;" 
-                            HorizontalAlignment="Left"/>
+                                Width="48" 
+                                Height="55" 
+                                FontSize="20"
+                                Background="Transparent"
+                                Foreground="Black"
+                                BorderThickness="0"
+                                VerticalAlignment="Bottom" 
+                                Margin="18,70,0,0"
+                                FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE115;" 
+                                HorizontalAlignment="Left"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="1">
-                        <TextBlock Text="Monday"
-                                   Height="55" 
-                                  Margin="16,18,0,30"
-                                   HorizontalAlignment="Right"/>
-                    </StackPanel>
+
+
+                    <Grid Grid.Column="1">
+                        <TextBlock Text="Setting"
+                                   FontSize="25"
+                                   Foreground="Black"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Bottom" 
+                                   Margin="0,0,185,40"/>
+                    </Grid>
+                   
                 </Grid>
 
             </Border>
