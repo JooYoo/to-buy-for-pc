@@ -45,18 +45,11 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.ColumnSpan="2">
                         <Button Name="btnDrawer" 
-                                Width="48" 
-                                Height="55" 
-                                Margin="16,18,0,30"
+                                Style="{StaticResource btnFunc}"
+                                Margin="17,18,0,15"
                                 Click="btnDrawer_Click" 
-                                FontFamily="Segoe MDL2 Assets"
                                 Content="&#xE700;" 
-                                FontSize="20"
-                                Background="Transparent"
-                                Foreground="Black"
-                                BorderThickness="0"
-                                VerticalAlignment="Top" 
-                                HorizontalAlignment="Left"/>
+                                VerticalAlignment="Top"/>
                         <Button Style="{StaticResource WeekDayBtn}"
                                 Content="&#x24C2;    Monday" 
                                 Command="{Binding MondayCommand}"/>
@@ -78,29 +71,21 @@
                         <Button Style="{StaticResource WeekDayBtn}"
                                 Content="&#x24CA;    Sunday" 
                                 Command="{Binding SundayCommand}"/>
-                        <Button Name="BtnSetting"
-                                Width="48" 
-                                Height="55" 
-                                FontSize="20"
-                                Background="Transparent"
-                                Foreground="Black"
-                                BorderThickness="0"
+
+                        <Button Name="BtnPrint"
+                                Style="{StaticResource btnFunc}"
                                 VerticalAlignment="Bottom" 
-                                Margin="18,70,0,0"
-                                FontFamily="Segoe MDL2 Assets"
-                                Content="&#xE115;" 
-                                HorizontalAlignment="Left"/>
+                                Margin="17,30,0,0"
+                                Content="&#xE2F6;" />
+
+                        <Button Name="BtnSetting"
+                                Style="{StaticResource btnFunc}"
+                                VerticalAlignment="Bottom" 
+                                Margin="17,10,0,0"
+                                Content="&#xE115;" />
                     </StackPanel>
 
-
-                    <Grid Grid.Column="1">
-                        <TextBlock Text="Setting"
-                                   FontSize="25"
-                                   Foreground="Black"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Bottom" 
-                                   Margin="0,0,185,36"/>
-                    </Grid>
+                    
                    
                 </Grid>
 
