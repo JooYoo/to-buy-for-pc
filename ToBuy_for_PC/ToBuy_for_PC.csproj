@@ -117,6 +117,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Imgs\Polygon-art-simple-mountains-abstract-1920x1080-wallpaper24165.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imgs\LoliLinus_OS_simple_background_mountains-140401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imgs\wallpaper2you_184713.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imgs\wallpaper2you_184735.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

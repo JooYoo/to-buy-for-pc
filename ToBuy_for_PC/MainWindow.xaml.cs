@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
-using ToBuy_for_PC.ListWindow;
 
 namespace ToBuy_for_PC
 {

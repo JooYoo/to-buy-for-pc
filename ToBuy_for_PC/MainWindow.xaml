@@ -7,7 +7,7 @@
         d:DataContext="{d:DesignInstance toBuyForPc:MainWindowViewModel}"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
-        Title="MainWindow" Height="800" Width="600">
+        Title="MainWindow" Height="810" Width="600">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,7 +15,7 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="0"/>
-            <RowDefinition Height="0.29*"/>
+            <RowDefinition Height="0.35*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -85,7 +85,6 @@
                                 Content="&#xE115;" />
                     </StackPanel>
                 </Grid>
-
             </Border>
         </StackPanel>
 
@@ -95,12 +94,14 @@
                    Content="{Binding DayWeekTime}"
                    FontSize="40"
                    FontWeight="Light"
+                   Foreground="White"
                    HorizontalAlignment="Left"
                    Padding="20,25,0,0"
                    VerticalAlignment="Top"/>
+            <Grid.Background>
+                <ImageBrush ImageSource="Imgs/Polygon-art-simple-mountains-abstract-1920x1080-wallpaper24165.jpg"/>
+            </Grid.Background>
         </Grid>
-
-
 
         <!--Enter Item Area: press Enter to add Item to list-->
         <Grid Row="1" Column="1">
@@ -133,7 +134,6 @@
                       SelectedItem="{Binding SelectedToBuy}"
                       CanUserAddRows="False"
                       ColumnWidth="*"
-                      
                       FontSize="25"
                       Background="Transparent"
                       BorderThickness="0"
@@ -191,7 +191,6 @@
                     Content="&#xE16E;"
                     Command="{Binding ArrangeCommand}"/>
         </Grid>
-
     </Grid>
 
     <!--SideDrawer-right Animation-->
