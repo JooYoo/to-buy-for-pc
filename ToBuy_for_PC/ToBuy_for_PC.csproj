@@ -71,6 +71,7 @@
     <Compile Include="ListWindow\RemoveSelectedCommand.cs" />
     <Compile Include="SideDrawer\FridayCommand.cs" />
     <Compile Include="SideDrawer\MondayCommand.cs" />
+    <Compile Include="SideDrawer\PrintCommand.cs" />
     <Compile Include="SideDrawer\SaturdayCommand.cs" />
     <Compile Include="SideDrawer\SundayCommand.cs" />
     <Compile Include="SideDrawer\ThursdayCommand.cs" />

@@ -66,6 +66,7 @@ namespace ToBuy_for_PC
         public ICommand AddCommand { get; set; }
         public ICommand RemoveSelectedCommand { get; set; }
         public ICommand ArrangeCommand { get; set; }
+        public ICommand PrintCommand { get; set; }
 
         public ICommand MondayCommand { get; set; }
         public ICommand TuesdayCommand { get; set; }
@@ -107,6 +108,8 @@ namespace ToBuy_for_PC
             FridayCommand = new FridayCommand(this);
             SaturdayCommand = new SaturdayCommand(this);
             SundayCommand = new SundayCommand(this);
+            // print Btn
+            PrintCommand = new PrintCommand(this);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

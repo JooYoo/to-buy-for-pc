@@ -15,6 +15,30 @@
       {
         "Name": "Banana",
         "IsDone": false
+      },
+      {
+        "Name": "apple",
+        "IsDone": false
+      },
+      {
+        "Name": "milk",
+        "IsDone": false
+      },
+      {
+        "Name": "coke",
+        "IsDone": false
+      },
+      {
+        "Name": "beef",
+        "IsDone": false
+      },
+      {
+        "Name": "wine",
+        "IsDone": false
+      },
+      {
+        "Name": "rice",
+        "IsDone": false
       }
     ],
     "WeekDay": 2,

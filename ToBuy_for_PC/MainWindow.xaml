@@ -71,12 +71,12 @@
                         <Button Style="{StaticResource WeekDayBtn}"
                                 Content="&#x24CA;    Sunday" 
                                 Command="{Binding SundayCommand}"/>
-
                         <Button Name="BtnPrint"
                                 Style="{StaticResource btnFunc}"
                                 VerticalAlignment="Bottom" 
                                 Margin="17,30,0,0"
-                                Content="&#xE2F6;" />
+                                Content="&#xE2F6;" 
+                                Command="{Binding PrintCommand}"/>
 
                         <Button Name="BtnSetting"
                                 Style="{StaticResource btnFunc}"
@@ -84,9 +84,6 @@
                                 Margin="17,10,0,0"
                                 Content="&#xE115;" />
                     </StackPanel>
-
-                    
-                   
                 </Grid>
 
             </Border>
