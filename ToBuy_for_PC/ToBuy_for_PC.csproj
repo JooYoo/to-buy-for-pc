@@ -126,8 +126,5 @@
   <ItemGroup>
     <Resource Include="Imgs\wallpaper2you_184713.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imgs\wallpaper2you_184735.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
