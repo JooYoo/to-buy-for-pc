@@ -35,10 +35,6 @@
       {
         "Name": "wine",
         "IsDone": false
-      },
-      {
-        "Name": "rice",
-        "IsDone": false
       }
     ],
     "WeekDay": 2,
@@ -59,7 +55,15 @@
   {
     "ToBuys": [
       {
+        "Name": "text",
+        "IsDone": false
+      },
+      {
         "Name": "Donut",
+        "IsDone": false
+      },
+      {
+        "Name": "banana",
         "IsDone": false
       }
     ],
