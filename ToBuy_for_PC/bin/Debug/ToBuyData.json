@@ -30,15 +30,15 @@
       },
       {
         "Name": "milk",
-        "IsDone": true
+        "IsDone": false
       },
       {
         "Name": "apple",
-        "IsDone": true
+        "IsDone": false
       },
       {
         "Name": "Banana",
-        "IsDone": true
+        "IsDone": false
       }
     ],
     "WeekDay": 2,
@@ -121,14 +121,6 @@
     "ToBuys": [
       {
         "Name": "Grape",
-        "IsDone": false
-      },
-      {
-        "Name": "apple",
-        "IsDone": false
-      },
-      {
-        "Name": "milk",
         "IsDone": false
       }
     ],

@@ -59,27 +59,6 @@ namespace ToBuy_for_PC_Unit_Test
         }
 
         [TestMethod]
-        public void ToSaveFunctionTest()
-        {
-            // fake LoadData
-            var dataAccessMock = new Mock<IDataAccess>(); // instance a Mock for IDataAccess
-            dataAccessMock.Setup(m => m.ToLoad()).Returns(MockShoppingList()); // Mock LoadData
-
-            // call ArrangeCommand() once so that ToSave() will be called
-            var viewModel = new MainWindowViewModel(dataAccessMock.Object);
-            viewModel.WantBuy = "newItem"; // create a new data 
-
-            // after AddCommand() called the ToSave()
-            var addCommand = new AddCommand(viewModel);
-            addCommand.Execute(null);
-
-            // result
-            Assert.AreEqual(viewModel.ToBuys.Count, 1);
-            Assert.AreEqual(viewModel.ToBuys[0].Name, "newItem");
-            Assert.IsFalse(viewModel.ToBuys[0].IsDone);
-        }
-
-        [TestMethod]
         public void ToSaveClearCommandTest()
         {
             // fake LoadData
@@ -136,6 +115,27 @@ namespace ToBuy_for_PC_Unit_Test
 
             // after clear
             Assert.AreEqual(viewModel.ToBuys.Count, 0);
+        }
+
+        [TestMethod]
+        public void ToSaveFunctionTest()
+        {
+            // fake LoadData
+            var dataAccessMock = new Mock<IDataAccess>(); // instance a Mock for IDataAccess
+            dataAccessMock.Setup(m => m.ToLoad()).Returns(MockShoppingList()); // Mock LoadData
+
+            // call ArrangeCommand() once so that ToSave() will be called
+            var viewModel = new MainWindowViewModel(dataAccessMock.Object);
+            viewModel.WantBuy = "newItem"; // create a new data 
+
+            // after AddCommand() called the ToSave()
+            var addCommand = new AddCommand(viewModel);
+            addCommand.Execute(null);
+
+            // result
+            Assert.AreEqual(viewModel.ToBuys.Count, 1);
+            Assert.AreEqual(viewModel.ToBuys[0].Name, "newItem");
+            Assert.IsFalse(viewModel.ToBuys[0].IsDone);
         }
     }
 }

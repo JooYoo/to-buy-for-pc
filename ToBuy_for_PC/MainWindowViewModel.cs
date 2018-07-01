@@ -89,8 +89,7 @@ namespace ToBuy_for_PC
             DayWeekTime = DateTime.Today.DayOfWeek;
             // Textbox: placeholder
             WantBuy = "e.g. apple ...";
-            // DataGrid: load data from Json
-            // Todo: temporary use fake shoppingList for initialize
+            // DataGrid: load data from Json, display on DataGrid todayShoppingList
             ToBuys = new ObservableCollection<ToBuy>(ShoppingListManager.TodayShoppingList(ShoppingLists));
             // ClearButton
             ClearCommand = new ClearCommand(this);
