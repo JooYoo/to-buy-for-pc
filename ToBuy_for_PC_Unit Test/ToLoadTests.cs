@@ -37,7 +37,7 @@ namespace ToBuy_for_PC_Unit_Test
 
             // instance MainWindowViewModal to trigger ToLoad()
             var viewModel = new MainWindowViewModel(dataAccessMock.Object);
-            
+
             // result
             Assert.AreEqual(viewModel.ShoppingLists.Count, 1);
             Assert.AreEqual(viewModel.ShoppingLists[0].Name, "testShoppingList");
