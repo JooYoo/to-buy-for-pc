@@ -3,10 +3,10 @@
     "ToBuys": [
       {
         "Name": "Apple",
-        "IsDone": false
+        "IsDone": true
       },
       {
-        "Name": "Orange",
+        "Name": "Beer",
         "IsDone": false
       }
     ],
@@ -16,14 +16,6 @@
   },
   {
     "ToBuys": [
-      {
-        "Name": "coke",
-        "IsDone": false
-      },
-      {
-        "Name": "beef",
-        "IsDone": false
-      },
       {
         "Name": "wine",
         "IsDone": false
@@ -37,8 +29,16 @@
         "IsDone": false
       },
       {
-        "Name": "Banana",
+        "Name": "coke",
         "IsDone": false
+      },
+      {
+        "Name": "Banana",
+        "IsDone": true
+      },
+      {
+        "Name": "beef",
+        "IsDone": true
       }
     ],
     "WeekDay": 2,
@@ -121,6 +121,10 @@
     "ToBuys": [
       {
         "Name": "Grape",
+        "IsDone": false
+      },
+      {
+        "Name": "pear",
         "IsDone": false
       }
     ],
