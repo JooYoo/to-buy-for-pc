@@ -17,11 +17,19 @@
   {
     "ToBuys": [
       {
-        "Name": "wine",
+        "Name": "milk",
+        "IsDone": true
+      },
+      {
+        "Name": "coke",
         "IsDone": false
       },
       {
-        "Name": "milk",
+        "Name": "beef",
+        "IsDone": true
+      },
+      {
+        "Name": "wine",
         "IsDone": false
       },
       {
@@ -29,15 +37,7 @@
         "IsDone": false
       },
       {
-        "Name": "coke",
-        "IsDone": false
-      },
-      {
         "Name": "Banana",
-        "IsDone": true
-      },
-      {
-        "Name": "beef",
         "IsDone": true
       }
     ],
