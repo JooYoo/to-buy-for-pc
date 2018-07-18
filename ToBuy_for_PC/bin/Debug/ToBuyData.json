@@ -15,32 +15,7 @@
     "IsDone": false
   },
   {
-    "ToBuys": [
-      {
-        "Name": "milk",
-        "IsDone": true
-      },
-      {
-        "Name": "coke",
-        "IsDone": false
-      },
-      {
-        "Name": "beef",
-        "IsDone": true
-      },
-      {
-        "Name": "wine",
-        "IsDone": false
-      },
-      {
-        "Name": "apple",
-        "IsDone": false
-      },
-      {
-        "Name": "Banana",
-        "IsDone": true
-      }
-    ],
+    "ToBuys": [],
     "WeekDay": 2,
     "Name": null,
     "IsDone": false
@@ -49,6 +24,10 @@
     "ToBuys": [
       {
         "Name": "Cake",
+        "IsDone": false
+      },
+      {
+        "Name": "apple",
         "IsDone": false
       }
     ],
